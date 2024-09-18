@@ -5,8 +5,8 @@ apt upgrade -y
 apt-get update -y 
 apt-get upgrade -y
 apt-get install rsyslog -y
-systemctl start rsyslog
-systemctl enable rsyslog
+#systemctl start rsyslog
+
 apt-get install vim -y
 apt-get install touch -y
 apt-get install cron -y 
@@ -341,7 +341,7 @@ findtime = 600
 EOL
 
 echo -e "\033[46;33mFail2ban SSH 配置修改成功！\033[0m"
-
+systemctl enable rsyslog
 echo "bantime 1000000000----findtime 3m----maxretry=2----false=ture"
 
 echo -e "\033[46;33m-------------------------安装完成---------------------------------\033[0m"
